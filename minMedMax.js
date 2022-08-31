@@ -24,7 +24,9 @@ function minMedMax(n1, n2, n3) {
   for (let i = 0; i < arr.length; i++) {
     if(arr[i] != min && arr[i] != max) {
       mid = arr[i]
-    } else if (arr[i] == arr[0] || arr[i] == arr[1]) {
+    } else if (arr[i] == arr[0] && arr[i] == arr[1]) {
+      mid = arr[i]
+    } else if (arr[i] == arr[1] && arr[i] == arr[2]) {
       mid = arr[i]
     }
   }
@@ -35,6 +37,6 @@ function minMedMax(n1, n2, n3) {
   }
 }
 
-console.log(minMedMax(5, 1, 1));
+console.log(minMedMax(-1, -8, 0));
 
 module.exports = minMedMax
