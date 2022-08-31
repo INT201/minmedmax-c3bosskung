@@ -1,4 +1,4 @@
-//const { template } = require('@babel/core')
+const { template } = require('@babel/core')
 
 function minMedMax(n1, n2, n3) {
   let arr = [n1, n2, n3];
@@ -37,4 +37,4 @@ function minMedMax(n1, n2, n3) {
 
 console.log(minMedMax(5, 1, 1));
 
-//module.exports = minMedMax
+module.exports = minMedMax
