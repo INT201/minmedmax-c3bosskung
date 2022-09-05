@@ -11,7 +11,8 @@ function minMedMax(n1, n2, n3) {
   }  
   if (arr[2] <= arr[0] && arr[2] <= arr[1]) {
     min = arr[2];
-  }  
+  }
+    
   if (arr[0] >= arr[1] && arr[0] >= arr[2]) {
     max = arr[0];
   }  
@@ -21,12 +22,21 @@ function minMedMax(n1, n2, n3) {
   if (arr[2] >= arr[0] && arr[2] >= arr[1]) {
     max = arr[2];
   }
+
   for (let i = 0; i < arr.length; i++) {
     if(arr[i] != min && arr[i] != max) {
       mid = arr[i]
+      break;
     } else if (arr[i] == arr[0] && arr[i] == arr[1]) {
       mid = arr[i]
+      break;
     } else if (arr[i] == arr[1] && arr[i] == arr[2]) {
+      mid = arr[i]
+      break;
+    } else if (arr[i] == arr[2] && arr[i] == arr[1]) {
+      mid = arr[i]
+      break;
+    } else {
       mid = arr[i]
     }
   }
